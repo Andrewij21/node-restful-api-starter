@@ -30,6 +30,15 @@ export class AuthController {
       },
     });
   };
+  validateToken = async (req: Request, res: Response) => {
+    res.status(200).json({
+      success: true,
+      message: "Token is valid",
+      data: {
+        user: req.user,
+      },
+    });
+  };
 }
 
 // Export instance
